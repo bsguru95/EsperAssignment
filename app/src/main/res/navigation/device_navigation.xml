@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_mobile_list">
+
+    <fragment
+        android:id="@+id/navigation_mobile_list"
+        android:name="com.guru.esper.esperassesment.ui.DeviceFragment"
+        android:label="@string/mobile_list"
+        tools:layout="@layout/fragment_device" >
+        <action
+            android:id="@+id/action_navigation_mobile_list_to_navigation_summary"
+            app:destination="@id/navigation_summary"
+            app:popUpTo="@id/navigation_mobile_list"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_summary"
+        android:name="com.guru.esper.esperassesment.ui.DeviceDetails"
+        android:label="@string/summary"
+        tools:layout="@layout/fragment_device_details" >
+    </fragment>
+</navigation>
